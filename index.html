@@ -1,45 +1,4 @@
-<!-- □ زر Logout جاهز — كود واحد فقط -->
 
-<!-- أيقونات FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-.logout-badge{
-  background:#164478;
-  color:#fff;
-  padding:7px 20px;
-  border-radius:30px;
-  border:none;
-  font-size:14px;
-  font-weight:600;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.18);
-  transition:.25s;
-}
-.logout-badge i{
-  font-size:15px;
-}
-.logout-badge:hover{
-  background:#1e5799;
-  transform:translateY(-2px);
-}
-</style>
-
-<!-- زر تسجيل الخروج -->
-<button class="logout-badge" onclick="logout()">
-  <i class="fa-solid fa-right-from-bracket"></i>
-  Logout
-</button>
-
-<script>
-function logout(){
-  localStorage.removeItem("username");
-  location.href="https://www.prudle-education.com/log-in-out";
-}
-</script>
 
 <!-- أيقونات FontAwesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
