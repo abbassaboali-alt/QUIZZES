@@ -5959,11 +5959,7 @@ init();
 </body>
 </html>
 <script>
-let role = localStorage.getItem("role");
-if(role !== "trainer"){
-  alert("Access Denied!");
-  location.href = "https://www.prudle-education.com/log-in-out";
-}
+
 async function saveLinkedCourseSkill(
   questionId,
   courseId,
