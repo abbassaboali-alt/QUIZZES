@@ -41,31 +41,7 @@ function logout(){
 }
 </script>
 
-<script>
-// حماية الصفحات – التحقق من تسجيل الدخول
-(function(){
 
-  // لا يسمح بالدخول بدون تسجيل دخول
-  let user = localStorage.getItem("username");
-  let role = localStorage.getItem("role");
-  let last = localStorage.getItem("loginDate");
-
-  // ممنوع الدخول إذا مافي مستخدم
-  if(!user || !role){
-    location.href = "https://www.prudle-education.com/log-in-out";
-    return;
-  }
-
-  // التحقق من تاريخ آخر دخول (Auto Logout)
-  let today = new Date().toDateString();
-  if(last !== today){
-    localStorage.clear();
-    location.href = "https://www.prudle-education.com/log-in-out";
-    return;
-  }
-
-})();
-</script>
 <!-- أيقونات FontAwesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
