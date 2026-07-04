@@ -6149,13 +6149,16 @@ async function toggleQuestionLock(questionId){
     .trim()
     .toLowerCase();
 
-  // ❌ غير الأدمن ممنوع
-  if(role !== "admin"){
+// ✅ يسمح للأدمن والمدرب
+if(
+  role !== "admin" &&
+  role !== "trainer"
+){
 
-    alert("❌ Access Denied");
+  alert("❌ Access Denied");
 
-    return;
-  }
+  return;
+}
 
   // ✅ طلب الباسورد
   const pass = prompt(
