@@ -38,29 +38,6 @@ function logout(){
 }
 </script>
 
-<script>
-(function(){
-
-  let user = localStorage.getItem("username");
-  let role = localStorage.getItem("role");
-  let last = localStorage.getItem("loginDate");
-
-  if(!user || !role){
-    location.href = "https://www.prudle-education.com/log-in-out";
-    return;
-  }
-
-  let today = new Date().toDateString();
-
-  if(last !== today){
-    localStorage.clear();
-    sessionStorage.clear();
-    location.href = "https://www.prudle-education.com/log-in-out";
-    return;
-  }
-
-})();
-</script>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
